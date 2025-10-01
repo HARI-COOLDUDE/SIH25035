@@ -1,0 +1,63 @@
+{
+    "name": "econsultation-ai-frontend",
+    "version": "1.0.0",
+    "description": "AI-powered eConsultation comment analysis frontend",
+    "private": true,
+    "dependencies": {
+        "@tailwindcss/vite": "^4.1.13",
+        "lucide-react": "^0.294.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1",
+        "recharts": "^2.8.0",
+        "web-vitals": "^2.1.4"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.8.0",
+        "@testing-library/react": "^16.3.0",
+        "@testing-library/user-event": "^14.6.1",
+        "@types/react": "^18.2.43",
+        "@types/react-dom": "^18.2.17",
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.32",
+        "tailwindcss": "^3.4.17"
+    },
+    "scripts": {
+        "start": "set ESLINT_NO_DEV_ERRORS=true && react-scripts start",
+        "start-windows": "set ESLINT_NO_DEV_ERRORS=true && react-scripts start",
+        "build": "ESLINT_NO_DEV_ERRORS=true react-scripts build",
+        "build-windows": "set ESLINT_NO_DEV_ERRORS=true && react-scripts build",
+        "test": "react-scripts test",
+        "test:loading": "react-scripts test --testPathPattern=AutomatedLoadingDetection --watchAll=false --verbose",
+        "test:loading-animation": "react-scripts test --testPathPattern=CSSAnimationMonitor --watchAll=false --verbose",
+        "test:loading-runner": "react-scripts test --testPathPattern=LoadingDetectionTestRunner --watchAll=false --verbose",
+        "test:loading-all": "react-scripts test --testPathPattern=\"(AutomatedLoadingDetection|CSSAnimationMonitor|LoadingDetectionTestRunner)\" --watchAll=false --verbose",
+        "test:loading-report": "node src/scripts/runLoadingTests.js",
+        "test:integration": "react-scripts test --testPathPattern=IntegrationValidation --watchAll=false --verbose",
+        "test:functionality": "react-scripts test --testPathPattern=FunctionalityPreservation --watchAll=false --verbose",
+        "test:css-animation": "react-scripts test --testPathPattern=CSSAnimationValidation --watchAll=false --verbose",
+        "test:integration-all": "react-scripts test --testPathPattern=\"(IntegrationValidation|FunctionalityPreservation|CSSAnimationValidation)\" --watchAll=false --verbose",
+        "test:integration-report": "node src/scripts/runIntegrationTests.js",
+        "eject": "react-scripts eject",
+        "dev": "ESLINT_NO_DEV_ERRORS=true react-scripts start"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "proxy": "http://localhost:8000"
+}
