@@ -42,6 +42,5 @@ python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 
 # CORS
-=======
+fastapi-cors==0.1.4
 starlette==0.27.0
->>>>>>> 5a3456f89142d3e05dfac9355594a8edbfbf5fd2
