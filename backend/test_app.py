@@ -14,7 +14,7 @@ from fastapi.testclient import TestClient
 from unittest.mock import patch, MagicMock
 
 # Import the FastAPI app
-from app import app, init_database, process_comment, ai_models
+from app import app, process_comment, ai_models
 
 # Create test client
 client = TestClient(app)
